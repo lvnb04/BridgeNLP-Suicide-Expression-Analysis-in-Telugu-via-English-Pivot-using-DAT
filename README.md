@@ -97,10 +97,40 @@ NLP/
     * **Domain Classifier:** Another linear layer tries to predict the domain (English vs. Telugu) from the same features. It is trained to minimize the domain classification loss.
     * **Gradient Reversal Layer (GRL):** This crucial layer is placed between the feature extractor and the domain classifier. During backpropagation, it reverses the gradient flowing *to* the feature extractor *from* the domain classifier loss. This encourages the feature extractor to learn representations that are *useful* for the task classifier but *confusing* for the domain classifier, thus achieving domain invariance.
 * **Training Details:** The model was trained for 3 epochs using both English and Telugu data with a balanced batch sampler. Mixed-precision training (`torch.cuda.amp`) was used for efficiency. The total loss optimized was a combination of task loss and domain loss, weighted by a factor `lambda_`.
-* **Results (After Epoch 3):**
+* **Results (Logged During Training After Epoch 3):**
     * **Training:** Task Accuracy: 98.77%
     * **Validation (Overall):** Task Accuracy: 96.56%
     * **Validation (Telugu Only):** Task Accuracy: 93.22%
+    *(Note: The Telugu validation accuracy reported during training might differ from detailed evaluation due to potential logging nuances.)*
+
+* **Detailed Evaluation Results (Epoch 3 Model - Separate Script):**
+    * **Validation (Overall - 56,668 samples):**
+        * Accuracy: 0.9864
+        * Weighted Precision: 0.9864
+        * Weighted Recall: 0.9864
+        * Weighted F1-Score: 0.9864
+    * **Validation (English Only - 46,668 samples):**
+        * Accuracy: 0.9869
+        * Weighted Precision: 0.9869
+        * Weighted Recall: 0.9869
+        * Weighted F1-Score: 0.9869
+    * **Validation (Telugu Only - 10,000 samples):**
+        * Accuracy: 0.9841
+        * Weighted Precision: 0.9841
+        * Weighted Recall: 0.9841
+        * Weighted F1-Score: 0.9841
+
+---
+
+## Evaluation Confusion Matrices
+
+### Overall Validation Set
+
+![confusion_matrix_overall_validation](https://github.com/user-attachments/assets/2286d7cf-cc82-46e3-bc02-ceff90fc9ac9)
+
+### Telugu Validation Set
+
+![confusion_matrix_telugu_validation](https://github.com/user-attachments/assets/54475a28-f03c-40bf-bbe6-3ea7a4408983)
 
 ---
 
