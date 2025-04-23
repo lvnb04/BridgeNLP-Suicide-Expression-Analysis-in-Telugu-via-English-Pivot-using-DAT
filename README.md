@@ -128,7 +128,12 @@ NLP/
 
 ![confusion_matrix_overall_validation](https://github.com/user-attachments/assets/2286d7cf-cc82-46e3-bc02-ceff90fc9ac9)
 
-### Telugu Validation Set
+### English Validation Set
+
+![confusion_matrix_english_validation](https://github.com/user-attachments/assets/2770dcd9-bd98-4b5f-bb90-802f7566edea)
+
+
+### Telugu Validation Set (Main Task!)
 
 ![confusion_matrix_telugu_validation](https://github.com/user-attachments/assets/54475a28-f03c-40bf-bbe6-3ea7a4408983)
 
