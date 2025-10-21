@@ -15,6 +15,7 @@ The primary goal is to classify Telugu text as either "Suicidal" or "Non-Suicida
 * **MuRIL Model:** Fine-tunes the `google/muril-base-cased` model, known for its strong performance on Indian languages.
 * **Gemini-Powered Reasoning:** Employs the Gemini 1.5 Flash model to generate explanations for the MuRIL model's predictions, based on the important tokens identified via attention mechanisms.
 * **Synthetic Dataset:** Uses a synthetically generated Telugu dataset created by translating an English suicide watch dataset using the `ai4bharat/indictrans2-en-indic-1B` model.
+* [Synthetic Telugu Suicide Text Dataset Link](https://zenodo.org/records/15812058).
 
 ---
 
