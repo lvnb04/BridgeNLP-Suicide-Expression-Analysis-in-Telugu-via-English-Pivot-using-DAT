@@ -198,7 +198,7 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## License
 
-[Choose an appropriate license, e.g., MIT, Apache 2.0, or specify if it's private]
+MIT License
 
 ---
 
